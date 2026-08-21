@@ -8,7 +8,7 @@ with open("data/Year 9.json", "r", encoding="utf-8") as f:
 class QuizView(discord.ui.View):
 
     def __init__(self, questions, user):
-        super().__init__(timeout=180)
+        super().__init__(timeout=3600)
         self.questions = questions
         self.user = user
         self.index = 0
@@ -104,7 +104,7 @@ async def on_ready():
 
         embed = discord.Embed(
             title="Year 9 - Maths Test",
-            description="Click the button to answer 10 maths questions and get a score!",
+            description="Click the button and answer 10 maths questions in 60 minutes!",
             color=0x0075FF,
         )
 
